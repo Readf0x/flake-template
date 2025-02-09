@@ -12,7 +12,7 @@
       perSystem = { system, pkgs, ... }: {
         devShells.default = pkgs.mkShell {
           GOPATH = "/home/readf0x/.config/go";
-          packages = [ pkgs.go ];
+          packages = [ pkgs.go pkgs.delve ];
         };
       };
     };

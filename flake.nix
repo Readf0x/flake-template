@@ -11,8 +11,11 @@
       systems = [ "x86_64-linux" ];
       perSystem = { system, pkgs, ... }: {
         devShells.default = pkgs.mkShell {
-          GOPATH = "/home/readf0x/.config/go";
-          packages = [ pkgs.go pkgs.delve ];
+          packages = [  ];
+        };
+        packages = rec {
+          project = pkgs.stdenv.mkDerivation {};
+          default = project;
         };
       };
     };
